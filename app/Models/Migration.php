@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Migration extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'id',
+        'migration',
+        'batch',
+    ];
 }

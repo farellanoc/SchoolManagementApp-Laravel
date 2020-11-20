@@ -1,5 +1,19 @@
+  
 <?php
 
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CalendarController;
+use App\Http\Controllers\CourseController;
+use App\Http\Controllers\CourseSubjectController;
+use App\Http\Controllers\EnrollmentController;
+use App\Http\Controllers\ScheduleController;
+use App\Http\Controllers\StudentController;
+use App\Http\Controllers\SubjectController;
+use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\TestController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\UserPasswordController;
+use App\Http\Controllers\UserProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +31,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Auth::routes(["register" => false]);
+
+Route::get('/home',[App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/admin/dashboard',[
+    'uses' => 'AdminController@dashboard',
+    'as' => 'dashboard']);
+
+    Route::post('logged_in', [LoginController::class, 'authenticate']);

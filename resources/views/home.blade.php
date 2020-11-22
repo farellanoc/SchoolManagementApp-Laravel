@@ -1,14 +1,13 @@
   
 @extends('layouts.app')
 @section('content')
-    <!--<h5>{{$type ?? null}}</h5>
+    <h5>{{$type ?? null}}</h5>
     @foreach($users as $user)
         <p>{{$user->name}}</p>
-    @endforeach-->
+    @endforeach
 @include('menu.app')
 <div class="container">
-    
-    <div class="center-horizontal-vertical margin-top-50">
+    <div>
        <span class="welcome-text">¡Bienvenido/a!</span> 
     </div>
     <div>

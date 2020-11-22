@@ -32,10 +32,10 @@
 }
 .welcome-image{
   max-width: 50%;
-height: auto;
-border-radius: 8px;
-display:center;
-margin:auto;
+  height: auto;
+  border-radius: 8px;
+  display:center;
+  margin:auto;
 }
 .welcome{
   max-width: 50%;
@@ -49,6 +49,7 @@ margin:auto;
   font-size: 25px;
   text-transform: uppercase;
   margin-right: 30px;
+  display:center;
 }
 
 .welcome-gif {

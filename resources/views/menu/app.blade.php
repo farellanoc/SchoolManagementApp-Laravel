@@ -24,4 +24,4 @@
             <a href="{{route('course.index')}}">Cursos</a>
         </div>
     @endcan
-    </div>
+</div>

@@ -1,14 +1,19 @@
-<html>
- <head>
-  <title>Prueba de PHP</title>
-  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
- </head>
- <body>
- <div class="container">
- <div>Bienvenido</div>
-    <div class="center-horizontal-vertical margin-top-50">
-        <img class="welcome-image"src="{{asset('/images/Welcome.jpeg')}}">
+  @extends('layouts.app')
+  @section('content')
+    <!--<h5>{{$type ?? null}}</h5>
+    
+    @foreach($users as $user)
+        <p>{{$user->name}}</p>
+    @endforeach-->
+
+    @include('menu.app')
+
+    <div class="container">
+        <div>
+            <span class="welcome-text">¡Bienvenido/a!</span>
+        </div>
+        <div>
+            <img class="welcome" src="{{asset('/images/welcome.jpeg')}}">
+        </div>
     </div>
-</div>
- </body>
-</html>
+  @endsection

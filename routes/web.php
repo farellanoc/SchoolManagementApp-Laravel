@@ -38,8 +38,36 @@ Route::get('/profile', function () {
 Auth::routes(["register" => false]);
 
 Route::get('/home',[App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/admin/dashboard',[
-    'uses' => 'AdminController@dashboard',
-    'as' => 'dashboard']);
 
-    Route::post('logged_in', [LoginController::class, 'authenticate']);
+Route::group(['middleware' => 'auth'], function () {
+    Route::middleware('can:canAccessToWeeks')->group(function () {
+        Route::resource('calendar', CalendarController::class)->only('index');
+    });
+    Route::middleware('can:canAdminSubjects')->group(function () {
+        Route::resource('subject', SubjectController::class)->only(['create', 'store', 'edit', 'update', 'delete', 'index', 'destroy']);
+    });
+    Route::middleware('can:canAdminUsers')->group(function () {
+        Route::resource('user', UserController::class);
+    });
+    Route::middleware('can:canAdminEnrollments')->group(function () {
+        Route::resource('enrollment', EnrollmentController::class)->only(['create', 'store', 'edit', 'update', 'delete', 'index', 'destroy']);
+    });
+    Route::middleware('can:canShowCourses')->group(function () {
+        Route::resource('course', CourseController::class)->only(['index']);
+    });
+    Route::middleware('can:canModifyCourses')->group(function () {
+        Route::resource('course', CourseController::class)->only(['create', 'store', 'edit', 'update', 'delete', 'destroy']);
+    });
+    Route::middleware('can:canShowSchedules')->group(function () {
+        Route::resource('course/{course}/subjects/{subject}/schedules', ScheduleController::class)->only(['index']);
+    });
+    Route::middleware('can:canModifySchedules')->group(function () {
+        Route::resource('course/{course}/subjects/{subject}/schedules', ScheduleController::class)->only(['create', 'store', 'edit', 'update', 'delete', 'destroy']);
+    });
+    Route::middleware('can:canShowCoursesSubjects')->group(function () {
+        Route::resource('course/{course}/courseSubject', CourseSubjectController::class)->only(['index']);
+    });
+    Route::middleware('can:canModifyCoursesSubjects')->group(function () {
+        Route::resource('course/{course}/courseSubject', CourseSubjectController::class)->only(['create', 'store', 'edit', 'update', 'delete', 'destroy']);
+    });
+});

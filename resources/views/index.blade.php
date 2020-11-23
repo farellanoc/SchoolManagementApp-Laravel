@@ -1,4 +1,4 @@
-@extends('layouts/studentLayout')
+@extends('layouts/welcome')
 
 @section('indexContent')
 <div class="relative flex items-top justify-center min-h-screen text-white sm:items-center sm:pt-0">

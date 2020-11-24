@@ -15,8 +15,8 @@ class AddUserType extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
 
-            $table->smallInteger('user_type');
-            //php artisan migrate --path=/database/migrations/2020_11_23_115957_add_user_type.php
+            $table->smallInteger('type');
+            //php artisan migrate --path=/database/migrations/2020_11_23_115957_add_type.php
         });
     }
 

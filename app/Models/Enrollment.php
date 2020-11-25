@@ -15,5 +15,22 @@ class Enrollment extends Model
         'status',
         'id_enrollment',
     ];
+    
+    protected $casts = [
+        'id' => 'integer',
+        'course_id' => 'integer',
+        'user_id' => 'integer',
+        'active' => 'boolean',
+    ];
 
+
+    public function course()
+    {
+        return $this->belongsTo(\App\Models\Course::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(\App\Models\User::class);
+    }
 }

@@ -20,15 +20,15 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach ($enrollments as $enrollment)
+                @foreach ($enrollments as $key => $enrollment)
                     <tr>
-                        <th scope="row">{{$enrollment->id}}</th>
-                        <td>{{$enrollment->user->name}}</td>
-                        <td>{{$enrollment->course->name}}</td>
+                        <th scope="row">{{$enrollment->id_enrollment}}</th>
+                        <td>{{!empty($enrollment->user) ? $enrollment->user->name:"" }}</td>
+                        <td>{{!empty($enrollment->course) ?$enrollment->course->name:""}}</td>
                         <td>{{$enrollment->status}}</td>
-                        <td><a href="{{route('enrollment.edit', $enrollment->id)}}" type="button" class="btn btn-primary">Modificar</a></td>
+                        <td><a href="{{route('enrollment.edit', $enrollment->id_enrollment)}}" type="button" class="btn btn-primary">Modificar</a></td>
                         <td>
-                            {{ Form::open(array('url' => route('enrollment.destroy', $enrollment->id))) }}
+                            {{ Form::open(array('url' => route('enrollment.destroy', $enrollment->id_enrollment))) }}
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger btn-submit">Borrar</button>
                             {{ Form::close() }}

@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Events\NewCourse;
-use App\Http\Requests\CourseEditRequest;
 use App\Http\Requests\CourseStoreRequest;
 use App\Http\Requests\CourseUpdateRequest;
 use App\Models\Course;
@@ -88,7 +87,7 @@ class CourseController extends Controller
     {
         $course->update($request->validated());
 
-        $request->session()->flash('course.id', $course->id);
+        $request->session()->flash('course.id_course', $course->id_course);
 
         return redirect()->route('course.index');
     }

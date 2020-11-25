@@ -4,7 +4,7 @@
     @section('content')
         @include('menu.app')
         <div class="container">
-            {{ Form::open(array('url' => route('course.update',$course->id))) }}
+            {{ Form::open(array('url' => route('course.update',$course->id_course))) }}
             @method('PUT')
             <h2 class="margin-top-20">Cursos</h2>
             <div class="row margin-top-20 align-items">

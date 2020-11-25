@@ -26,16 +26,16 @@
                     <tbody>
                     @foreach ($courses as $course)
                         <tr>
-                            <th scope="row">{{$course->id}}</th>
+                            <th scope="row">{{$course->id_course}}</th>
                             <td>{{$course->name}}</td>
                             <td>{{$course->description}}</td>
                             <td>{{$course->date_start}}</td>
                             <td>{{$course->date_end}}</td>
                             <td>{{$course->active}}</td>
-                            @can('canModifyCourses')<td><a href="{{route('course.edit', $course->id)}}" type="button" class="btn btn-primary">Modificar</a></td>@endcan
-                            <td><a href="{{route('courseSubject.index', $course->id)}}" type="button" class="btn btn-success">Asignaturas</a></td>
+                            @can('canModifyCourses')<td><a href="{{route('course.edit', $course->id_course)}}" type="button" class="btn btn-primary">Modificar</a></td>@endcan
+                            <td><a href="{{route('courseSubject.index', $course->id_course)}}" type="button" class="btn btn-success">Asignaturas</a></td>
                             @can('canModifyCourses')<td>
-                                {{ Form::open(array('url' => route('course.destroy', $course->id))) }}
+                                {{ Form::open(array('url' => route('course.destroy', $course->id_course))) }}
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-danger btn-submit">Borrar</button>
                                 {{ Form::close() }}

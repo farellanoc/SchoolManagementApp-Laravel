@@ -24,9 +24,8 @@ class AuthServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerPolicies();
-
-        Gate::define('canAccessToWeeks', function ($user) {
-            return $user->type == 3;
+        Gate::define('canAccessCalendar', function ($user) {
+            return $user->user_type == 3;
         });
         Gate::define('canAdminSubjects', function ($user) {
             return $user->type == 1;

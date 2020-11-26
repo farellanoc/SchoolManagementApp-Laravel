@@ -27,33 +27,34 @@ class AuthServiceProvider extends ServiceProvider
 
         Gate::define('canAccessCalendar', function ($user) {
             return $user->user_type == 3;
+
         });
         Gate::define('canAdminSubjects', function ($user) {
-            return $user->user_type == 1;
+            return $user->type == 1;
         });
         Gate::define('canAdminUsers', function ($user) {
-            return $user->user_type == 1;
+            return $user->type == 1;
         });
         Gate::define('canAdminEnrollments', function ($user) {
-            return $user->user_type == 1;
+            return $user->type == 1;
         });
         Gate::define('canShowCourses', function ($user) {
-            return $user->user_type == 1 || $user->user_type == 2;
+            return $user->type == 1 || $user->type == 2;
         });
         Gate::define('canModifyCourses', function ($user) {
-            return $user->user_type == 1;
+            return $user->type == 1;
         });
         Gate::define('canShowSchedules', function ($user) {
-            return $user->user_type == 1 || $user->user_type == 2;
+            return $user->type == 1 || $user->type == 2;
         });
         Gate::define('canModifySchedules', function ($user) {
-            return $user->user_type == 1 || $user->user_type == 2;
+            return $user->type == 1 || $user->type == 2;
         });
         Gate::define('canShowCoursesSubjects', function ($user) {
-            return $user->user_type == 1 || $user->user_type == 2;
+            return $user->type == 1 || $user->type == 2;
         });
         Gate::define('canModifyCoursesSubjects', function ($user) {
-            return $user->user_type == 1;
+            return $user->type == 1;
         });
     }
 }

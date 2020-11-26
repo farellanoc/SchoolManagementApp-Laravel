@@ -19,7 +19,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '3e799c3dda1cd9d03c272638e025e0a6bb842b66',
+    'reference' => '0854a0c36f259a2bd47ad97cef9b7bf88a5edfdc',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -512,7 +512,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '3e799c3dda1cd9d03c272638e025e0a6bb842b66',
+      'reference' => '0854a0c36f259a2bd47ad97cef9b7bf88a5edfdc',
     ),
     'laravel/sanctum' => 
     array (
@@ -540,6 +540,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '444072cb2f8baaa15172c5cde2bd30d188c3b7e7',
+    ),
+    'laravelcollective/html' => 
+    array (
+      'pretty_version' => 'v6.2.0',
+      'version' => '6.2.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '3bb99be7502feb2129b375cd026ccb0fa4b66628',
     ),
     'league/commonmark' => 
     array (

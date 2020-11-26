@@ -18,4 +18,8 @@ class Course extends Model
         'active',
     ];
 
+    //Must be declared in order to let laravel know which is our primary key and table
+    protected $table = 'courses';
+
+    protected $primaryKey = 'id_course';
 }

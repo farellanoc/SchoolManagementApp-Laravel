@@ -35,6 +35,7 @@ class ComposerStaticInit58bce45ceb0c7ecf3c5870a1dd3cc64b
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         'ed962a97bd972bc82007176b647d4e36' => __DIR__ . '/..' . '/facade/ignition/src/helpers.php',
+        'f18cc91337d49233e5754e93f3ed9ec3' => __DIR__ . '/..' . '/laravelcollective/html/src/helpers.php',
         '40275907c8566c390185147049ef6e5d' => __DIR__ . '/..' . '/livewire/livewire/src/helpers.php',
     );
 
@@ -179,6 +180,7 @@ class ComposerStaticInit58bce45ceb0c7ecf3c5870a1dd3cc64b
         'C' => 
         array (
             'Cron\\' => 5,
+            'Collective\\Html\\' => 16,
             'Carbon\\' => 7,
         ),
         'B' => 
@@ -533,6 +535,10 @@ class ComposerStaticInit58bce45ceb0c7ecf3c5870a1dd3cc64b
         array (
             0 => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron',
         ),
+        'Collective\\Html\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravelcollective/html/src',
+        ),
         'Carbon\\' => 
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
@@ -580,7 +586,13 @@ class ComposerStaticInit58bce45ceb0c7ecf3c5870a1dd3cc64b
         'App\\Actions\\Fortify\\UpdateUserProfileInformation' => __DIR__ . '/../..' . '/app/Actions/Fortify/UpdateUserProfileInformation.php',
         'App\\Actions\\Jetstream\\DeleteUser' => __DIR__ . '/../..' . '/app/Actions/Jetstream/DeleteUser.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\Events\\NewCourse' => __DIR__ . '/../..' . '/app/Events/NewCourse.php',
+        'App\\Events\\NewCourseSubject' => __DIR__ . '/../..' . '/app/Events/NewCourseSubject.php',
+        'App\\Events\\NewEnrollment' => __DIR__ . '/../..' . '/app/Events/NewEnrollment.php',
+        'App\\Events\\NewSchedule' => __DIR__ . '/../..' . '/app/Events/NewSchedule.php',
+        'App\\Events\\NewSubject' => __DIR__ . '/../..' . '/app/Events/NewSubject.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Helpers\\UserTypes' => __DIR__ . '/../..' . '/app/Helpers/UserTypes.php',
         'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
@@ -591,6 +603,7 @@ class ComposerStaticInit58bce45ceb0c7ecf3c5870a1dd3cc64b
         'App\\Http\\Controllers\\CourseController' => __DIR__ . '/../..' . '/app/Http/Controllers/CourseController.php',
         'App\\Http\\Controllers\\EnrollmentController' => __DIR__ . '/../..' . '/app/Http/Controllers/EnrollmentController.php',
         'App\\Http\\Controllers\\ExamController' => __DIR__ . '/../..' . '/app/Http/Controllers/ExamController.php',
+        'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\MigrationController' => __DIR__ . '/../..' . '/app/Http/Controllers/MigrationController.php',
         'App\\Http\\Controllers\\NotificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/NotificationController.php',
         'App\\Http\\Controllers\\PercentageController' => __DIR__ . '/../..' . '/app/Http/Controllers/PercentageController.php',
@@ -599,6 +612,7 @@ class ComposerStaticInit58bce45ceb0c7ecf3c5870a1dd3cc64b
         'App\\Http\\Controllers\\SubjectController' => __DIR__ . '/../..' . '/app/Http/Controllers/SubjectController.php',
         'App\\Http\\Controllers\\TeacherController' => __DIR__ . '/../..' . '/app/Http/Controllers/TeacherController.php',
         'App\\Http\\Controllers\\UserAdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserAdminController.php',
+        'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserController.php',
         'App\\Http\\Controllers\\WorkController' => __DIR__ . '/../..' . '/app/Http/Controllers/WorkController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
@@ -609,6 +623,17 @@ class ComposerStaticInit58bce45ceb0c7ecf3c5870a1dd3cc64b
         'App\\Http\\Middleware\\TrustHosts' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustHosts.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Http\\Requests\\CourseStoreRequest' => __DIR__ . '/../..' . '/app/Http/Requests/CourseStoreRequest.php',
+        'App\\Http\\Requests\\CourseSubjectStoreRequest' => __DIR__ . '/../..' . '/app/Http/Requests/CourseSubjectStoreRequest.php',
+        'App\\Http\\Requests\\CourseSubjectUpdateRequest' => __DIR__ . '/../..' . '/app/Http/Requests/CourseSubjectUpdateRequest.php',
+        'App\\Http\\Requests\\CourseUpdateRequest' => __DIR__ . '/../..' . '/app/Http/Requests/CourseUpdateRequest.php',
+        'App\\Http\\Requests\\EnrollmentStoreRequest' => __DIR__ . '/../..' . '/app/Http/Requests/EnrollmentStoreRequest.php',
+        'App\\Http\\Requests\\EnrollmentUpdateRequest' => __DIR__ . '/../..' . '/app/Http/Requests/EnrollmentUpdateRequest.php',
+        'App\\Http\\Requests\\ScheduleStoreRequest' => __DIR__ . '/../..' . '/app/Http/Requests/ScheduleStoreRequest.php',
+        'App\\Http\\Requests\\ScheduleUpdateRequest' => __DIR__ . '/../..' . '/app/Http/Requests/ScheduleUpdateRequest.php',
+        'App\\Http\\Requests\\SubjectStoreRequest' => __DIR__ . '/../..' . '/app/Http/Requests/SubjectStoreRequest.php',
+        'App\\Http\\Requests\\SubjectUpdateRequest' => __DIR__ . '/../..' . '/app/Http/Requests/SubjectUpdateRequest.php',
+        'App\\Http\\Requests\\UserPasswordUpdateRequest' => __DIR__ . '/../..' . '/app/Http/Requests/UserPasswordUpdateRequest.php',
         'App\\Models\\Course' => __DIR__ . '/../..' . '/app/Models/Course.php',
         'App\\Models\\Enrollment' => __DIR__ . '/../..' . '/app/Models/Enrollment.php',
         'App\\Models\\Exam' => __DIR__ . '/../..' . '/app/Models/Exam.php',
@@ -629,8 +654,6 @@ class ComposerStaticInit58bce45ceb0c7ecf3c5870a1dd3cc64b
         'App\\Providers\\FortifyServiceProvider' => __DIR__ . '/../..' . '/app/Providers/FortifyServiceProvider.php',
         'App\\Providers\\JetstreamServiceProvider' => __DIR__ . '/../..' . '/app/Providers/JetstreamServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
-        'App\\View\\Components\\AppLayout' => __DIR__ . '/../..' . '/app/View/Components/AppLayout.php',
-        'App\\View\\Components\\GuestLayout' => __DIR__ . '/../..' . '/app/View/Components/GuestLayout.php',
         'Asm89\\Stack\\Cors' => __DIR__ . '/..' . '/asm89/stack-cors/src/Cors.php',
         'Asm89\\Stack\\CorsService' => __DIR__ . '/..' . '/asm89/stack-cors/src/CorsService.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
@@ -782,6 +805,13 @@ class ComposerStaticInit58bce45ceb0c7ecf3c5870a1dd3cc64b
         'Carbon\\Traits\\Units' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Units.php',
         'Carbon\\Traits\\Week' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Week.php',
         'Carbon\\Translator' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Translator.php',
+        'Collective\\Html\\Componentable' => __DIR__ . '/..' . '/laravelcollective/html/src/Componentable.php',
+        'Collective\\Html\\Eloquent\\FormAccessible' => __DIR__ . '/..' . '/laravelcollective/html/src/Eloquent/FormAccessible.php',
+        'Collective\\Html\\FormBuilder' => __DIR__ . '/..' . '/laravelcollective/html/src/FormBuilder.php',
+        'Collective\\Html\\FormFacade' => __DIR__ . '/..' . '/laravelcollective/html/src/FormFacade.php',
+        'Collective\\Html\\HtmlBuilder' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlBuilder.php',
+        'Collective\\Html\\HtmlFacade' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlFacade.php',
+        'Collective\\Html\\HtmlServiceProvider' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlServiceProvider.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Cron\\AbstractField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/AbstractField.php',
         'Cron\\CronExpression' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/CronExpression.php',

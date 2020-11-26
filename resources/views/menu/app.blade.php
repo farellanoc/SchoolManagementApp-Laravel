@@ -1,5 +1,5 @@
 <div class="submenu-options">
-    @can('canAccessToWeeks')
+    @can('canAccessCalendar')
         <div class="item-option margin-right-15 cursor-pointer">
                 <a href="{{route('calendar.index')}}">Semana</a>
         </div>

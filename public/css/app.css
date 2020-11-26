@@ -14632,26 +14632,21 @@ label {
   margin-bottom: var(--space-sm);
   font-weight: bold;
 }
-
-@media (min-width: 64rem) {
-  #calendarUOC .js .cd-schedule__top-info {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-    height: var(--schedule-rows-height);
-    border-bottom: 1px solid #ebebeb;
-    border-bottom: 1px solid var(--cd-color-border);
-    padding: 0;
-  }
-
-  #calendarUOC .js .cd-schedule__top-info > span {
-    font-weight: normal;
-    font-size: 0.83333em;
-    font-size: var(--text-sm);
-    margin-bottom: 0;
-  }
+.welcome-image{
+  max-width: 50%;
+  height: auto;
+  border-radius: 8px;
+  display:center;
+  margin:auto;
+  margin-left: 650px;
 }
+.welcome{
+  max-width: 50%;
+  height: auto;
+  border-radius: 8px;
+  display:block;
+  margin:auto;
+  margin-top:100px;
 
 #calendarUOC .cd-schedule__event {
   flex-shrink: 0;
@@ -14664,13 +14659,13 @@ label {
   transition: opacity 0.2s, background 0.2s;
 }
 
-#calendarUOC .cd-schedule__event a {
+.welcome-text {
+  font-size: 25px;
+  text-transform: uppercase; 
   display: block;
-  height: 100%;
-  padding: 0.75em;
-  padding: var(--space-sm);
-  box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.2);
-  text-decoration: none;
+  text-align: center;
+  margin-top:100px;
+
 }
 
 #calendarUOC .cd-schedule__event a::before {

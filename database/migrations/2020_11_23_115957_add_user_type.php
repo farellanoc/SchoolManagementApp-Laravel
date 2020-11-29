@@ -15,7 +15,10 @@ class AddUserType extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
 
-            $table->smallInteger('type');
+            $table->string('surname')->after('name')->default('');
+            $table->string('telephone')->after('surname')->default('');
+            $table->string('nif')->after('telephone')->default('');
+            $table->integer('type')->default(3);
             //php artisan migrate --path=/database/migrations/2020_11_23_115957_add_type.php
         });
     }
@@ -28,7 +31,10 @@ class AddUserType extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            //
+            $table->dropColumn('surname');
+            $table->dropColumn('telephone');
+            $table->dropColumn('nif');
+            $table->dropColumn('type');
         });
     }
 }

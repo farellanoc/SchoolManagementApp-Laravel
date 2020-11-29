@@ -11,9 +11,6 @@ class CreateSubjectsTable extends Migration
      *
      * @return void
      */
-
-     //SUBJECTS = CLASS.
-     //SINCE CLASS ITS A RESERVED WORD WE HAVE TO USE SUBJECTS
     public function up()
     {
         Schema::disableForeignKeyConstraints();
@@ -21,8 +18,6 @@ class CreateSubjectsTable extends Migration
         Schema::create('subjects', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
-            $table->foreignId('course_id')->constrained()->cascadeOnDelete();
-            $table->foreignId('schedule_id')->constrained()->cascadeOnDelete();
             $table->string('name');
             $table->string('color');
             $table->timestamps();

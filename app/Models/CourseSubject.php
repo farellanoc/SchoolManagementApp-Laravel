@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Subject extends Model
+class CourseSubject extends Model
 {
     use HasFactory;
 
@@ -15,9 +15,8 @@ class Subject extends Model
      * @var array
      */
     protected $fillable = [
-        'user_id',
-        'name',
-        'color',
+        'course_id',
+        'subject_id',
     ];
 
     /**
@@ -27,11 +26,18 @@ class Subject extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'user_id' => 'integer',
+        'course_id' => 'integer',
+        'subject_id' => 'integer',
     ];
 
-    public function user()
+
+    public function course()
     {
-        return $this->belongsTo(\App\Models\User::class);
+        return $this->belongsTo(\App\Models\Course::class);
+    }
+
+    public function subject()
+    {
+        return $this->belongsTo(\App\Models\Subject::class);
     }
 }

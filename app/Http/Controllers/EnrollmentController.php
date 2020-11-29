@@ -30,7 +30,7 @@ class EnrollmentController extends Controller
      */
     public function create(Request $request)
     {
-        $courses = Course::all()->pluck('name','id_course');
+        $courses = Course::all()->pluck('name','id');
         $students = User::where('type',UserTypes::getIdUserTypesByName('student'))->get()
             ->pluck('name','id');
         return view('enrollment.create', compact('courses','students'));
@@ -70,7 +70,7 @@ class EnrollmentController extends Controller
      */
     public function edit(Request $request, Enrollment $enrollment)
     {
-        $courses = Course::all()->pluck('name','id_course');
+        $courses = Course::all()->pluck('name','id');
         $students = User::where('type',UserTypes::getIdUserTypesByName('student'))->get()
             ->pluck('name','id');
         return view('enrollment.edit', compact('enrollment'), compact('courses','students'));

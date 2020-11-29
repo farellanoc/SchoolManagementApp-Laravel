@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateEnrollmentsTable extends Migration
+class CreatePercentagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,17 +14,15 @@ class CreateEnrollmentsTable extends Migration
     public function up()
     {
         Schema::disableForeignKeyConstraints();
-
-        Schema::create('enrollments', function (Blueprint $table) {
+        
+        Schema::create('percentages', function (Blueprint $table) {
             $table->id();
             $table->foreignId('course_id')->constrained()->cascadeOnDelete();
-            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
-            $table->foreignId('enrollment_id')->constrained()->cascadeOnDelete();
-            $table->integer('status');
-            $table->boolean('active');
+            $table->foreignId('subject_id')->constrained()->cascadeOnDelete();
+            $table->float('continuos_assessment');
+            $table->float('exams');
             $table->timestamps();
         });
-
         Schema::enableForeignKeyConstraints();
     }
 
@@ -35,6 +33,6 @@ class CreateEnrollmentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('enrollments');
+        Schema::dropIfExists('percentages');
     }
 }

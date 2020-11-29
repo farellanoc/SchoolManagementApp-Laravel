@@ -32,7 +32,8 @@ class User extends Authenticatable
         'profile_photo_path',
         'created_at',
         'updated_at',
-        'password'
+        'password',
+        'type'
     ];
 
     /**
@@ -54,6 +55,16 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function enrollments()
+    {
+        return $this->hasmany('enrollments');
+    }
+
+    public function getTypeNameAttributte()
+    {
+        return UserTypes::getUserTypeById($this->type);
+    }
+    
     /**
      * The accessors to append to the model's array form.
      *

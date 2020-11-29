@@ -87,7 +87,7 @@ class CourseController extends Controller
     {
         $course->update($request->validated());
 
-        $request->session()->flash('course.id_course', $course->id_course);
+        $request->session()->flash('course.id_course', $course->id);
 
         return redirect()->route('course.index');
     }

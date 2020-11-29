@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateEnrollmentsTable extends Migration
+class CreateSubjectsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,13 +15,11 @@ class CreateEnrollmentsTable extends Migration
     {
         Schema::disableForeignKeyConstraints();
 
-        Schema::create('enrollments', function (Blueprint $table) {
+        Schema::create('subjects', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('course_id')->constrained()->cascadeOnDelete();
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
-            $table->foreignId('enrollment_id')->constrained()->cascadeOnDelete();
-            $table->integer('status');
-            $table->boolean('active');
+            $table->string('name');
+            $table->string('color');
             $table->timestamps();
         });
 
@@ -35,6 +33,6 @@ class CreateEnrollmentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('enrollments');
+        Schema::dropIfExists('subjects');
     }
 }

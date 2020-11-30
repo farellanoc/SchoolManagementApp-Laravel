@@ -21,10 +21,10 @@
                     <td>{{$subject->name}}</td>
                     <td><a href="{{route('subject.edit', $subject->id)}}" type="button" class="btn btn-primary">Modificar</a></td>
                     <td>
-                        {{ Form::open(array('url' => route('subject.destroy', $subject->id))) }}
+                       {{-- {{ Form::open(array('url' => route('subject.destroy', $subject->id))) }}
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger btn-submit">Borrar</button>
-                        {{ Form::close() }}
+                        {{ Form::close() }}--}}
                     </td>
                    </tr>
                 @endforeach

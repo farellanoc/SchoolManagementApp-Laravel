@@ -26,11 +26,11 @@ class AuthServiceProvider extends ServiceProvider
         $this->registerPolicies();
 
         Gate::define('canAccessCalendar', function ($user) {
-            return $user->type == 3;
+            return $user->user_type == 3;
 
         });
         Gate::define('canAdminSubjects', function ($user) {
-            return $user->type == 1|| $user->type == 2;
+            return $user->type == 1 || $user->type == 2;
         });
         Gate::define('canAdminUsers', function ($user) {
             return $user->type == 1;
@@ -42,7 +42,7 @@ class AuthServiceProvider extends ServiceProvider
             return $user->type == 1 || $user->type == 2;
         });
         Gate::define('canModifyCourses', function ($user) {
-            return $user->type == 1|| $user->type == 2;
+            return $user->type == 1 || $user->type == 2;
         });
         Gate::define('canShowSchedules', function ($user) {
             return $user->type == 1 || $user->type == 2;

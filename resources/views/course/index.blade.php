@@ -34,12 +34,12 @@
                         <td>{{$course->active}}</td>
                         @can('canModifyCourses')<td><a href="{{route('course.edit', $course->id)}}" type="button" class="btn btn-primary">Modificar</a></td>@endcan
                         <td><a href="{{route('courseSubject.index', $course->id)}}" type="button" class="btn btn-success">Asignaturas</a></td>
-                        @can('canModifyCourses')<td>
+                       {{-- @can('canModifyCourses')<td>
                             {{ Form::open(array('url' => route('course.destroy', $course->id))) }}
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-danger btn-submit">Borrar</button>
+                               <button type="submit" class="btn btn-danger btn-submit">Borrar</button>
                             {{ Form::close() }}
-                        </td>@endcan
+                        </td>@endcan--}}
                     </tr>
                 @endforeach
                 </tbody>

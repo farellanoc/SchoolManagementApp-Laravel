@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Events\NewCourse;
+use App\Http\Requests\CourseEditRequest;
 use App\Http\Requests\CourseStoreRequest;
 use App\Http\Requests\CourseUpdateRequest;
 use App\Models\Course;

@@ -30,19 +30,19 @@ class AuthServiceProvider extends ServiceProvider
 
         });
         Gate::define('canAdminSubjects', function ($user) {
-            return $user->type == 1;
+            return $user->type == 1|| $user->type == 2;
         });
         Gate::define('canAdminUsers', function ($user) {
             return $user->type == 1;
         });
         Gate::define('canAdminEnrollments', function ($user) {
-            return $user->type == 1;
+            return $user->type == 1|| $user->type == 2;
         });
         Gate::define('canShowCourses', function ($user) {
             return $user->type == 1 || $user->type == 2;
         });
         Gate::define('canModifyCourses', function ($user) {
-            return $user->type == 1;
+            return $user->type == 1|| $user->type == 2;
         });
         Gate::define('canShowSchedules', function ($user) {
             return $user->type == 1 || $user->type == 2;

@@ -63,12 +63,7 @@
                                     <a href="{{ route('profile/modify') }}">
                                         Perfil
                                     </a>
-                                </span>
-                                <span>
-                                    <a href="{{ route('profile/modify/password') }}">
-                                        Cambiar contraseña
-                                    </a>
-                                </span>
+                                </span> 
                                 <span>
                                     <a href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

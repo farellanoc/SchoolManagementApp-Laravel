@@ -37,7 +37,7 @@
                         @can('canModifyCourses')<td>
                             {{ Form::open(array('url' => route('course.destroy', $course->id))) }}
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-danger btn-submit">Borrar</button>
+                               <button type="submit" class="btn btn-danger btn-submit">Borrar</button>
                             {{ Form::close() }}
                         </td>@endcan
                     </tr>

@@ -21,6 +21,9 @@ class CreateWorksTable extends Migration
             $table->foreignId('subject_id')->constrained()->cascadeOnDelete();
             $table->string('name');
             $table->float('mark');
+            $table->dateTime('time_start');
+            $table->dateTime('time_end');
+            $table->string('days');
             $table->timestamps();
         });
         Schema::enableForeignKeyConstraints();

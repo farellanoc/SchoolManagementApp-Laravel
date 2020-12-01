@@ -24,4 +24,14 @@
             <a href="{{route('course.index')}}">Cursos</a>
         </div>
     @endcan
+    @can('canAdminExam')
+        <div class="item-option margin-right-15 cursor-pointer">
+            <a href="{{route('exam.index')}}">Exámenes</a>
+        </div>
+    @endcan
+    @can('canAdminWork')
+        <div class="item-option margin-right-15 cursor-pointer">
+            <a href="{{route('user.index')}}">Trabajos</a>
+        </div>
+    @endcan
 </div>

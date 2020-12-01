@@ -12,6 +12,10 @@
         <label>Email</label>
         <input class="margin-left-10 form-control" type="email" name="email"  value="{{$user->email}}">
     </div>
+    <div class="form-check margin-top-20">
+    <input type="checkbox" class="form-check-input" id="mailNotification">
+    <label class="form-check-label" for="exampleCheck1">Activar notificaciones por email</label>
+  </div>
     <div class="form-group text-center margin-top-20">
         <button class="btn btn-success btn-submit">Guardar</button>
     </div>

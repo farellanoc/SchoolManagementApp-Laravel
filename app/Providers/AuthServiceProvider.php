@@ -36,10 +36,10 @@ class AuthServiceProvider extends ServiceProvider
             return $user->type == 1;
         });
         Gate::define('canAdminExam', function ($user) {
-            return $user->type == 1;
+            return $user->type == 1 || $user->type == 2;
         });
         Gate::define('canAdminWork', function ($user) {
-            return $user->type == 1;
+            return $user->type == 1 || $user->type == 2;
         });
         Gate::define('canAdminEnrollments', function ($user) {
             return $user->type == 1|| $user->type == 2;

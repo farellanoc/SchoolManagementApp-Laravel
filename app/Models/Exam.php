@@ -10,11 +10,46 @@ class Exam extends Model
     use HasFactory;
 
     protected $fillable = [
-        'id_exam',
-        'id_class',
-        'id_student',
+        'id',
+        'subject_id',
+        'user_id',
         'name',
         'mark',
+        'time_start',
+        'time_end',
+        'days'
     ];
+
+
+        /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'id' => 'integer',
+        'subject_id' => 'integer',
+        'user_id' => 'integer',
+    ];
+
+    /**
+    * The attributes that should be mutated to dates.
+    *
+    * @var array
+    */
+    protected $dates = [
+        'time_start',
+        'time_end',
+    ];
+        
+    public function subject()
+    {
+        return $this->belongsTo(\App\Models\Subject::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(\App\Models\User::class);
+    }
 
 }

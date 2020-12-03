@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Exam;
 use App\Events\NewExam;
 use App\Helpers\UserTypes;
+use App\Helpers\WeekDays;
 use App\Http\Requests\ExamEditRequest;
 use App\Http\Requests\ExamStoreRequest;
 use App\Http\Requests\ExamUpdateRequest;
@@ -30,10 +31,11 @@ class ExamController extends Controller
     */
     public function create(Request $request)
     {
+        $days = config('calendar.days');
         $subjects = Subject::all()->pluck('name','id');
         $students = User::where('type',UserTypes::getIdUserTypesByName('student'))->get()
             ->pluck('name','id');
-        return view('exam.create', compact('subjects','students'));
+        return view('exam.create', compact('subjects','students','days'));
     }
 
     
@@ -71,18 +73,22 @@ class ExamController extends Controller
      */
     public function edit(Request $request, Exam $exam)
     {
+        $days = config('calendar.days');
         $subjects = Subject::all()->pluck('name','id');
         $students = User::where('type',UserTypes::getIdUserTypesByName('student'))->get()
             ->pluck('name','id');
-        return view('exam.edit', compact('exam'), compact('subjects','students'));
+
+        $selectedDays = WeekDays::stringDaysToNumberArray($exam->days);
+
+        return view('exam.edit', compact('exam'), compact('subjects','days','students','selectedDays'));
     }
 
     /**
      * @param \App\Http\Requests\ExamUpdateRequest $request
-     * @param \App\Models\Exam $enrollment
+     * @param \App\Models\Exam $exam
      * @return \Illuminate\Http\Response
      */
-    public function update(EnrollmentUpdateRequest $request, Exam $exam)
+    public function update(ExamUpdateRequest $request, Exam $exam)
     {
         $exam->update($request->validated());
 

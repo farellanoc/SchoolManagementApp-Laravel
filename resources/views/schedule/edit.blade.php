@@ -29,17 +29,7 @@
             <div class="row margin-top-20 align-items">
                 {{ Form::select('days[]', $days, $selectedDays, ['id' => 'days', 'multiple' => 'multiple', 'class'=>'custom-select', 'name'=> 'days[]'])}}
             </div>
-            <div class="form-group row margin-top-20">
-                <div class="form-check">
-                    <label class="form-check-label">
-                        @if($schedule->active)
-                            <input class="form-check-input" type="checkbox" name="active" checked> Activado
-                        @else
-                            <input class="form-check-input" type="checkbox" name="active"> Activado
-                        @endif
-                    </label>
-                </div>
-            </div>
+
             <div class="form-group text-center margin-top-20">
                 <button class="btn btn-success btn-submit">Guardar</button>
             </div>

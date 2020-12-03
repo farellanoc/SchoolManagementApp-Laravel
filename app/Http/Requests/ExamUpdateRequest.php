@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Helpers\WeekDays;
 use Illuminate\Foundation\Http\FormRequest;
 
 class ExamUpdateRequest extends FormRequest
@@ -30,20 +31,12 @@ class ExamUpdateRequest extends FormRequest
             'mark' => [],
             'time_start' => ['required'],
             'time_end' => ['required'],  
-            'days'=>['required', 'string']
+            'days'=>[]
         ];
     }
     public function validated()
     {
         $item = $this->validator->validated();
-
-        if(empty($item['active'])){
-            $item['active'] = false;
-        }
-
-        if(!is_bool($item['active'])){
-            $item['active'] = $item['active'] == 'on';
-        }
 
         $item['days'] = WeekDays::arrayDaysToString($item['days']);
 

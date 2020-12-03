@@ -31,9 +31,8 @@
                 <input class="form-control" type="date" name="time_end">
             </div>
             <div class="row margin-top-20 align-items">
-                <label>Días</label>
-                <input class="form-control" type="text" name="days">
-            </div>             
+                    {{ Form::select('days[]', $days, null, ['id' => 'days', 'multiple' => 'multiple', 'class'=>'custom-select', 'name'=> 'days[]'])}}
+                </div>           
             <div class="form-group text-center margin-top-20">
                 <button class="btn btn-success btn-submit">Guardar</button>
             </div>

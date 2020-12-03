@@ -14,6 +14,7 @@ use App\Http\Controllers\TestController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserPasswordController;
 use App\Http\Controllers\UserProfileController;
+use App\Http\Controllers\ExamController;
 use Illuminate\Support\Facades\Route;
 
 /*

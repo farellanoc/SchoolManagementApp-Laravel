@@ -71,7 +71,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::resource('course/{course}/courseSubject', CourseSubjectController::class)->only(['create', 'store', 'edit', 'update', 'delete', 'destroy']);
     });
     Route::middleware('can:canAdminExam')->group(function () {
-        Route::resource('exam', ExamController::class);
+        Route::resource('exam', 'App\Http\Controllers\ExamController')->only(['create', 'store', 'edit', 'update', 'delete', 'index', 'destroy']);
     });
     Route::get('profile/modify', [UserProfileController::class, 'index'])->name('profile/modify');
     Route::post('profile/modify', [UserProfileController::class, 'update'])->name('profile/modify');

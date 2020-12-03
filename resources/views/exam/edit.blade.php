@@ -12,7 +12,7 @@
         </div>
         <div class="row margin-top-20 align-items">
             <label>Estudiante</label>
-            {{Form::select('user_id',$students, $enrollment->user->id, ['class' => 'form-control'])}}
+            {{Form::select('user_id',$students, $exam->user->id, ['class' => 'form-control'])}}
         </div>
         <div class="row margin-top-20 align-items">
             <label>Nombre</label>

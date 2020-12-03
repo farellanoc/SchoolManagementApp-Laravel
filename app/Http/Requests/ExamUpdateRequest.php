@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Helpers\WeekDays;
 use Illuminate\Foundation\Http\FormRequest;
 
 class ExamUpdateRequest extends FormRequest

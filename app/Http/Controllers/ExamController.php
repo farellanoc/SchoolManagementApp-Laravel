@@ -71,7 +71,7 @@ class ExamController extends Controller
      */
     public function edit(Request $request, Exam $exam)
     {
-        $Subjects = Subject::all()->pluck('name','id');
+        $subjects = Subject::all()->pluck('name','id');
         $students = User::where('type',UserTypes::getIdUserTypesByName('student'))->get()
             ->pluck('name','id');
         return view('exam.edit', compact('exam'), compact('subjects','students'));

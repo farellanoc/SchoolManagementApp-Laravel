@@ -30,7 +30,7 @@ class ExamUpdateRequest extends FormRequest
             'mark' => [],
             'time_start' => ['required'],
             'time_end' => ['required'],  
-            'days'=>['required', 'string']
+            'days'=>[]
         ];
     }
     public function validated()

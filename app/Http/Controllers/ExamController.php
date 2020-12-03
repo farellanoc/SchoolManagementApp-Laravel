@@ -78,17 +78,17 @@ class ExamController extends Controller
         $students = User::where('type',UserTypes::getIdUserTypesByName('student'))->get()
             ->pluck('name','id');
 
-        $selectedDays = WeekDays::stringDaysToNumberArray($schedule->days);
+        $selectedDays = WeekDays::stringDaysToNumberArray($exam->days);
 
         return view('exam.edit', compact('exam'), compact('subjects','days','students','selectedDays'));
     }
 
     /**
      * @param \App\Http\Requests\ExamUpdateRequest $request
-     * @param \App\Models\Exam $enrollment
+     * @param \App\Models\Exam $exam
      * @return \Illuminate\Http\Response
      */
-    public function update(EnrollmentUpdateRequest $request, Exam $exam)
+    public function update(ExamUpdateRequest $request, Exam $exam)
     {
         $exam->update($request->validated());
 

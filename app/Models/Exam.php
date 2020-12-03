@@ -10,11 +10,21 @@ class Exam extends Model
     use HasFactory;
 
     protected $fillable = [
-        'id_exam',
-        'id_class',
-        'id_student',
+        'subject_id',
+        'user_id',
         'name',
         'mark',
     ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'user_id' => 'integer',
+        'subject_id' => 'integer',
+    ];
+
+    public function user()
+    {
+        return $this->belongsTo(\App\Models\User::class);
+    }
 
 }

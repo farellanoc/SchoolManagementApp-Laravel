@@ -31,7 +31,7 @@
     @endcan
     @can('canAdminWork')
         <div class="item-option margin-right-15 cursor-pointer">
-            <a href="{{route('user.index')}}">Trabajos</a>
+            <a href="{{route('work.index')}}">Trabajos</a>
         </div>
     @endcan
 </div>

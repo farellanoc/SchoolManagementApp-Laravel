@@ -31,7 +31,7 @@
         <nav class="navbar navbar-expand-md navbar-light shadow-sm header-menu gradientBlue">
             <div class="container">
                 <!-- <img class="logo" src="{{asset('/images/logo.png')}}"> -->
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" style="color:white;" href="{{ url('/home') }}">
                     Calendario centro educativo
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">

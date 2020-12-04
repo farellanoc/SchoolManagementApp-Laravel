@@ -11389,9 +11389,9 @@ fieldset[disabled] .btn-default.active {
 }
 
 .btn.btn-primary {
-    background-color: transparent;
+    background-color: #1b4b72;
     border:1px solid #f0f0f0;
-    border-color:#f0f0f0;
+    border-color:#2a4aff;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -11474,7 +11474,7 @@ img::-moz-selection {
 }
 
 .header-menu {
-  background: #f3d250;
+  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
 }
 
 .submenu-options .align-items {
@@ -11495,14 +11495,14 @@ img::-moz-selection {
 }
 
 .submenu-options .item-option:hover {
-  background-color: #f78888;
+  background-color: #57b3ff;
 }
 
 .submenu-options {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 15px;
+
 }
 
 .margin-top-20 {
@@ -15573,3 +15573,4 @@ label {
   opacity: 0.8;
 }
 
+/* Custom Sub Menu */

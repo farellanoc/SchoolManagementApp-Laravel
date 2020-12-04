@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Programa Gestión Educativa</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -28,7 +28,7 @@
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light shadow-sm header-menu">
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm header-menu gradientBlue">
             <div class="container">
                 <!-- <img class="logo" src="{{asset('/images/logo.png')}}"> -->
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -60,12 +60,12 @@
                         <span>Hola {{ Auth::user()->name }}<span>
                         <p>
                         <span>
-                                    <a href="{{ route('profile/modify') }}">
+                                    <a class="badge badge-primary" href="{{ route('profile/modify') }}">
                                         Perfil
                                     </a>
                                 </span> 
                                 <span>
-                                    <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                    <a class="badge badge-danger" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>

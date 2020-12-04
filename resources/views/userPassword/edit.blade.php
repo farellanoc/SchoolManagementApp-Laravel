@@ -1,6 +1,8 @@
     @extends('layouts.app')
 
     @section('content')
+
+    @include('menu.app')
     <div class="box" style="padding-left: 100px; padding-right: 100px;">
         <div class="box-header margin-top-20">
             <h2>Modificar contraseña</h2>

@@ -27,7 +27,7 @@
                 <hr>
                 @if (Route::has('login'))
                 @auth
-                <a href="{{ url('/home') }}">Home</a>
+                <a class="btn btn-success btn-xl" href="{{ url('/home') }}">Home</a>
                 @else
                 <a class="btn btn-success btn-xl" href="{{ route('login') }}">Login</a> &nbsp;
                 @if (Route::has('register'))

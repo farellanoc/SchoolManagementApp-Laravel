@@ -21,7 +21,7 @@ class Work extends Model
     ];
 
 
-        /**
+    /**
      * The attributes that should be cast to native types.
      *
      * @var array
@@ -33,23 +33,22 @@ class Work extends Model
     ];
 
     /**
-    * The attributes that should be mutated to dates.
-    *
-    * @var array
-    */
+     * The attributes that should be mutated to dates.
+     *
+     * @var array
+     */
     protected $dates = [
         'time_start',
         'time_end',
     ];
-        
+
     public function subject()
     {
-        return $this->belongsTo(\App\Models\Subject::class);
+        return $this->belongsTo(Subject::class);
     }
 
     public function user()
     {
-        return $this->belongsTo(\App\Models\User::class);
+        return $this->belongsTo(User::class);
     }
-
 }

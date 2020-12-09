@@ -3,7 +3,7 @@
 @section('content')
     @include('menu.app')
     <div class="container">
-        <h2 class="margin-top-20">Exámenes</h2>
+        <h2 class="margin-top-20">Trabajos</h2>
         <div class="table-responsive margin-top-20">
      <table class="table">
          <thead>
@@ -22,16 +22,16 @@
          </tr>
          </thead>
          <tbody>
-                @foreach ($examStudent as $exam)
+                @foreach ($workStudent as $work)
                     <tr>
-                        <th scope="row">{{$exam->id}}</th>
-                        <td>{{$exam->subject_id}}</td>
-                        <td>{{$exam->user_id}}</td>
-                        <td>{{$exam->name}}</td>
-                        <td>{{$exam->mark}}</td>
-                        <td>{{$exam->time_start}}</td>
-                        <td>{{$exam->time_end}}</td>
-                        <td>{{$exam->days}}</td>
+                        <th scope="row">{{$work->id}}</th>
+                        <td>{{$work->subject_id}}</td>
+                        <td>{{$work->user_id}}</td>
+                        <td>{{$work->name}}</td>
+                        <td>{{$work->mark}}</td>
+                        <td>{{$work->time_start}}</td>
+                        <td>{{$work->time_end}}</td>
+                        <td>{{$work->days}}</td>
                     </tr>
                 @endforeach
                 </tbody>

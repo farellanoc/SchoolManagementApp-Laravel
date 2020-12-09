@@ -14,7 +14,7 @@ class ExamStudentController extends Controller
 {
     public function index(Request $request) {
     $examStudent = Exam::all()->where("user_id", Auth::user()->id);
-    return view('exam.index', compact('examStudent'));
+    return view('examStudent.index', compact('examStudent'));
 }
 }
 

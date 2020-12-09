@@ -77,7 +77,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::middleware('can:canAdminWork')->group(function () {
         Route::resource('work', WorkController::class);
     });
-    Route::middleware('can:canAdminExam')->group(function () {
+    Route::middleware('can:canAccessExamStudent')->group(function () {
         Route::resource('examStudent', ExamStudentController::class)->only(['index']);
     });
     Route::get('profile/modify', [UserProfileController::class, 'index'])->name('profile/modify');

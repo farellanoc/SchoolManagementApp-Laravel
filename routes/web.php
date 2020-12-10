@@ -14,6 +14,8 @@ use App\Http\Controllers\UserPasswordController;
 use App\Http\Controllers\UserProfileController;
 use App\Http\Controllers\ExamController;
 use App\Http\Controllers\WorkController;
+use App\Http\Controllers\ExamStudentController;
+use App\Http\Controllers\WorkStudentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -75,6 +77,12 @@ Route::group(['middleware' => 'auth'], function () {
     });
     Route::middleware('can:canAdminWork')->group(function () {
         Route::resource('work', WorkController::class);
+    });
+    Route::middleware('can:canAccessExamStudent')->group(function () {
+        Route::resource('examStudent', ExamStudentController::class)->only(['index']);
+    });
+    Route::middleware('can:canAccessWorkStudent')->group(function () {
+        Route::resource('workStudent', WorkStudentController::class)->only(['index']);
     });
     Route::get('profile/modify', [UserProfileController::class, 'index'])->name('profile/modify');
     Route::post('profile/modify', [UserProfileController::class, 'update'])->name('profile/modify');

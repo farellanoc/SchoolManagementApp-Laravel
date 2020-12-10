@@ -6,6 +6,24 @@
         </svg>
         <a href="{{route('calendar.index')}}">Calendario</a>
     </div>
+   
+    @endcan
+    @can('canAccessExamStudent')
+    <div class="item-option margin-right-15 cursor-pointer">
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-award-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8 0l1.669.864 1.858.282.842 1.68 1.337 1.32L13.4 6l.306 1.854-1.337 1.32-.842 1.68-1.858.282L8 12l-1.669-.864-1.858-.282-.842-1.68-1.337-1.32L2.6 6l-.306-1.854 1.337-1.32.842-1.68L6.331.864 8 0z" />
+        <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z" />
+        </svg>
+        <a href="{{route('examStudent.index')}}">Exámenes</a>
+    </div>
+    @endcan
+    @can('canAccessWorkStudent')
+    <div class="item-option margin-right-15 cursor-pointer">
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-calendar-plus-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM6.646 5.646a.5.5 0 1 1 .708.708L5.707 8l1.647 1.646a.5.5 0 0 1-.708.708l-2-2a.5.5 0 0 1 0-.708l2-2zm2.708 0a.5.5 0 1 0-.708.708L10.293 8 8.646 9.646a.5.5 0 0 0 .708.708l2-2a.5.5 0 0 0 0-.708l-2-2z" />
+        </svg>
+        <a href="{{route('workStudent.index')}}">Trabajos</a>
+    </div>
     @endcan
     @can('canAdminSubjects')
     <div class="item-option margin-right-15 cursor-pointer">

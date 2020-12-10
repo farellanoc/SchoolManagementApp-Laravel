@@ -2,7 +2,7 @@
 
 It is a simple Laravel & MySQL application that you can manage a school.
 
-[Video presentation (spanish)](http://vfernandez.me/uoc/video_laravel_gestion_escolar.mp4)
+Video Presentation https://youtu.be/-0okpwaoPHw
 
 ---
 
@@ -15,7 +15,7 @@ It is a simple Laravel & MySQL application that you can manage a school.
 ---
 
 ### Run Project (windows)
-* `git clone` https://github.com/victorfg/schoolManagementSystemLaravel.git
+* `git clone`https://github.com/farellanoc/SchoolManagementApp-Laravel
 * `composer install`
 * `npm install`
 * create Database
@@ -25,8 +25,6 @@ It is a simple Laravel & MySQL application that you can manage a school.
 
 ### Credits
 
-* Manuel Mendizábal González
-* Víctor Fernández Gayan
 
 ### MIT Licensed
 

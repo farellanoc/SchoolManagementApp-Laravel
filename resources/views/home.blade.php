@@ -3,7 +3,7 @@
 
     @include('menu.app')
 
-    @can('canAdminSubjectTeacher')
+    @can('canAdminExam')
     <div style="padding-top:100px;"></div>
         <div class="container">
             <div class="row">

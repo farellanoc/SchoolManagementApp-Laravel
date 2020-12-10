@@ -27,7 +27,7 @@
                                         @endif
                                         <li class="cd-schedule__event">
                                             <a style="background-color: {{$event['data']['subject_color']}}" data-start="{{$event['data']['time_start']}}" data-end="{{$event['data']['time_end']}}" data-content="event-abs-circuit" data-event="event-1" >
-                                                <p style="color:white;font-size:10px;">{{$event['data']['course_name']}}</p>
+                                                <p style="font-size:12px;">{{$event['data']['course_name']}}</p>
                                                 <em class="cd-schedule__name">{{$event['data']['subject_name']}}</em>
                                             </a>
                                         </li>
@@ -38,25 +38,10 @@
                     </ul>
                 </div>
 
-                <div class="cd-schedule-modal">
-                    <header class="cd-schedule-modal__header">
-                        <div class="cd-schedule-modal__content">
-                            <span class="cd-schedule-modal__date"></span>
-                            <h3 class="cd-schedule-modal__name"></h3>
-                        </div>
-
-                        <div class="cd-schedule-modal__header-bg"></div>
-                    </header>
-
-                    <div class="cd-schedule-modal__body">
-                        <div class="cd-schedule-modal__event-info"></div>
-                        <div class="cd-schedule-modal__body-bg"></div>
-                    </div>
-
-                    <a href="#0" class="cd-schedule-modal__close text-replace">Close</a>
-                </div>
-
-                <div class="cd-schedule__cover-layer"></div>
+<div class="footerC center-horizontal-vertical">
+    Calendario de estudios personalizado para &nbsp;<span style="font-weight: bold;">{{ Auth::user()->name }}</span>, no compartas tu cuenta con terceras personas.
+</div>
+            
             </div>
         </div>
     @endsection

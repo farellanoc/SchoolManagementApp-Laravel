@@ -35,8 +35,11 @@ class AuthServiceProvider extends ServiceProvider
         Gate::define('canAccessWorkStudent', function ($user) {
             return $user->type == 3;
         });
+        Gate::define('canAdminSubjectTeacher', function ($user) {
+            return $user->type == 2;
+        });
         Gate::define('canAdminSubjects', function ($user) {
-            return $user->type == 1 || $user->type == 2;
+            return $user->type == 1;
         });
         Gate::define('canAdminUsers', function ($user) {
             return $user->type == 1;
@@ -51,10 +54,10 @@ class AuthServiceProvider extends ServiceProvider
             return $user->type == 1|| $user->type == 2;
         });
         Gate::define('canShowCourses', function ($user) {
-            return $user->type == 1 || $user->type == 2;
+            return $user->type == 1;
         });
         Gate::define('canModifyCourses', function ($user) {
-            return $user->type == 1 || $user->type == 2;
+            return $user->type == 1;
         });
         Gate::define('canShowSchedules', function ($user) {
             return $user->type == 1 || $user->type == 2;
@@ -63,7 +66,7 @@ class AuthServiceProvider extends ServiceProvider
             return $user->type == 1 || $user->type == 2;
         });
         Gate::define('canShowCoursesSubjects', function ($user) {
-            return $user->type == 1 || $user->type == 2;
+            return $user->type == 1;
         });
         Gate::define('canModifyCoursesSubjects', function ($user) {
             return $user->type == 1;
